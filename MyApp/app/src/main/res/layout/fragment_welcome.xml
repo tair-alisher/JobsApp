@@ -1,14 +1,74 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
+    android:background="@color/background"
     tools:context=".presentation.welcome.WelcomeFragment">
 
-    <!-- TODO: Update blank fragment layout -->
-    <TextView
+    <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:text="@string/hello_blank_fragment" />
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:paddingBottom="45dp"
+        >
 
-</FrameLayout>
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:src="@drawable/ellipse"
+            tools:ignore="contentDescription"
+            />
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:adjustViewBounds="true"
+            android:layout_marginTop="20dp"
+            android:src="@drawable/welcome_screen"
+            android:layout_gravity="center_horizontal"
+            android:contentDescription="welcome screen"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Search your dream job fast and ease"
+            android:layout_marginTop="10dp"
+            android:layout_marginHorizontal="34dp"
+            android:textStyle="bold"
+            android:textColor="@color/text_main"
+            android:textSize="24sp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginHorizontal="34dp"
+            android:text="We help you find your dream job according to your skillset, location and preference to build your career"
+            android:textColor="@color/text_secondary"
+            android:textSize="16sp"
+            android:layout_gravity="center_horizontal"
+            android:textAlignment="center"
+            />
+
+        <Button
+            android:id="@+id/get_started_btn"
+            android:layout_width="match_parent"
+            android:layout_marginHorizontal="34dp"
+            android:layout_height="wrap_content"
+            android:text="Get started"
+            android:background="@drawable/app_button"
+            android:backgroundTint="@color/primary"
+            android:textAllCaps="false"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginTop="30dp"
+            />
+
+    </LinearLayout>
+</ScrollView>

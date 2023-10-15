@@ -9,6 +9,7 @@ import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
 import com.example.myapp.databinding.ActivityMainBinding
 import com.example.myapp.presentation.onboarding.OnboardingFragment
+import com.example.myapp.presentation.welcome.WelcomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
@@ -23,7 +24,9 @@ class MainActivity : AppCompatActivity() {
         val navController = navHostFragment.navController
 
         PreferenceManager.getDefaultSharedPreferences(this).apply {
-            if (!getBoolean(OnboardingFragment.ONBOARDING_COMPLETED_PREF_NAME, false)) {
+            if (!getBoolean(WelcomeFragment.WELCOME_COMPLETED_PREF_NAME, false)) {
+                navController.navigate(R.id.action_homeFragment_to_welcomeFragment)
+            } else if (!getBoolean(OnboardingFragment.ONBOARDING_COMPLETED_PREF_NAME, false)) {
                 navController.navigate(R.id.action_homeFragment_to_onboardingFragment)
             }
         }
@@ -33,7 +36,8 @@ class MainActivity : AppCompatActivity() {
         navController.addOnDestinationChangedListener{ _, destination, _ ->
             if (destination.id == R.id.loginFragment ||
                 destination.id == R.id.registerFragment ||
-                destination.id == R.id.onboardingFragment) {
+                destination.id == R.id.onboardingFragment ||
+                destination.id == R.id.welcomeFragment) {
                 binding.bottomMenu.visibility = View.GONE
             } else {
                 binding.bottomMenu.visibility = View.VISIBLE

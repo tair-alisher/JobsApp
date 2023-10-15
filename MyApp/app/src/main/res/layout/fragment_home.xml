@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@color/background"
+    tools:context=".presentation.core.home.HomeFragment"
+    android:paddingHorizontal="@dimen/horizontal_padding">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Featured Jobs"
+            android:textStyle="bold"
+            android:textColor="@color/text_main"
+            android:textSize="18sp"
+            android:layout_gravity="start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See all"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_gravity="end" />
+    </FrameLayout>
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Recent jobs"
+            android:textColor="@color/text_main"
+            android:textStyle="bold"
+            android:textSize="18sp"
+            android:layout_gravity="start" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="See all"
+            android:textColor="@color/text_secondary"
+            android:textSize="14sp"
+            android:layout_gravity="end" />
+    </FrameLayout>
+    <!-- TODO: Update blank fragment layout -->
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:gravity="center"
+        android:text="Home Fragment" />
+
+</LinearLayout>

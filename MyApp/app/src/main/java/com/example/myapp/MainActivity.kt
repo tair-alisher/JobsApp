@@ -3,7 +3,6 @@ package com.example.myapp
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.view.View
-import androidx.core.splashscreen.SplashScreen.Companion.installSplashScreen
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
 import androidx.preference.PreferenceManager
@@ -13,6 +12,9 @@ import com.example.myapp.presentation.welcome.WelcomeFragment
 
 class MainActivity : AppCompatActivity() {
     private lateinit var binding: ActivityMainBinding
+
+    // private val currentFragment: Fragment?
+    //    get() = supportFragmentManager.findFragmentById(R.id.fragment_container)
 
     override fun onCreate(savedInstanceState: Bundle?) {
 
@@ -45,5 +47,9 @@ class MainActivity : AppCompatActivity() {
         }
 
         setContentView(binding.root)
+    }
+
+    companion object {
+        const val TAG: String = "JobsApp"
     }
 }

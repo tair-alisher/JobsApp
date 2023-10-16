@@ -22,20 +22,21 @@ class WelcomeFragment : Fragment() {
 
         binding.getStartedBtn.setOnClickListener {
             context?.let { ctx ->
-                PreferenceManager.getDefaultSharedPreferences(ctx).apply {
-                    if (!getBoolean(OnboardingFragment.ONBOARDING_COMPLETED_PREF_NAME, false)) {
-                        findNavController().navigate(R.id.action_welcomeFragment_to_onboardingFragment)
-                    } else {
-                        edit().apply {
-                            putBoolean(WELCOME_COMPLETED_PREF_NAME, true)
-                            apply()
-                        }
+                val preferenceManager = PreferenceManager.getDefaultSharedPreferences(ctx)
 
-                        findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
-                    }
+                val isOnboardingCompleted = preferenceManager.getBoolean(OnboardingFragment.ONBOARDING_COMPLETED_PREF_NAME, false)
+
+                val preferenceEditor = preferenceManager.edit()
+                preferenceEditor.putBoolean(WELCOME_COMPLETED_PREF_NAME, true)
+                preferenceEditor.apply()
+
+                if (!isOnboardingCompleted) {
+                    findNavController().navigate(R.id.action_welcomeFragment_to_onboardingFragment)
+                }
+                else {
+                    findNavController().navigate(R.id.action_welcomeFragment_to_homeFragment)
                 }
             }
-
         }
 
         return binding.root

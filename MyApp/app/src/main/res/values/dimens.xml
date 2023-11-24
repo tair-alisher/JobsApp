@@ -1,4 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <dimen name="vertical_padding">14dp</dimen>
     <dimen name="horizontal_padding">14dp</dimen>
+    <dimen name="text_h4">24dp</dimen>
+    <dimen name="auth_edit_height">50dp</dimen>
 </resources>

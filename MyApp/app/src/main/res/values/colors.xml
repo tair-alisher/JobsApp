@@ -20,4 +20,5 @@
 
     <color name="text_main">#0D0D26</color>
     <color name="text_secondary">#95969D</color>
+    <color name="input_gray">#AFB0B6</color>
 </resources>

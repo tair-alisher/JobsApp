@@ -1,14 +1,46 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".presentation.auth.login.LoginFragment">
+    android:background="@color/background"
+    android:orientation="vertical"
+    android:gravity="center_horizontal"
+    tools:context=".presentation.auth.login.LoginFragment"
+    android:padding="@dimen/horizontal_padding">
+
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:src="@drawable/in_app_logo" />
 
     <TextView
-        android:layout_width="match_parent"
-        android:layout_height="match_parent"
-        android:gravity="center"
-        android:text="Login Fragment" />
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/text_h4"
+        android:textColor="@color/text_main"
+        android:text="Welcome Back"
+        android:textStyle="bold" />
 
-</FrameLayout>
+    <EditText
+        android:id="@+id/login"
+        style="@style/AuthInput"
+        android:inputType="textPersonName"
+        android:hint="Enter login"
+        />
+
+    <EditText
+        android:id="@+id/email"
+        style="@style/AuthInput"
+        android:inputType="textEmailAddress"
+        android:hint="Enter email"
+        />
+
+    <EditText
+        android:id="@+id/password"
+        style="@style/AuthInput"
+        android:inputType="textPassword"
+        android:hint="Enter password"
+        />
+
+</LinearLayout>

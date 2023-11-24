@@ -15,4 +15,15 @@
         <!-- Customize your theme here. -->
         <item name="android:fontFamily">@font/poppins</item>
     </style>
+
+    <style name="AuthInput">
+        <item name="android:background">@drawable/auth_input</item>
+        <item name="android:layout_marginTop">10dp</item>
+        <item name="android:layout_height">@dimen/auth_edit_height</item>
+        <item name="android:layout_width">match_parent</item>
+        <item name="android:layout_margin">10dp</item>
+        <item name="android:textColor">@color/input_gray</item>
+        <item name="android:textColorHint">@color/text_secondary</item>
+        <item name="android:maxLines">1</item>
+    </style>
 </resources>

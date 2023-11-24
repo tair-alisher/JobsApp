@@ -9,9 +9,12 @@ namespace JobsApp.Domain.Entities
         public string Description { get; set; }
         public decimal Salary { get; set; }
         public string Location { get; set; }
+
         public EmploymentTimeType TimeType { get; set; }
         public EmploymentType EmploymentType { get; set; }
         public SalaryType SalaryType { get; set; }
+
+        public bool IsPinned { get; set; }
         public bool IsClosed { get; set; }
 
         public int CompanyId { get; set; }

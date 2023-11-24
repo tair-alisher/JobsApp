@@ -39,6 +39,10 @@ namespace JobsApp.DAL.Context.Configs
             builder.Property(x => x.EmploymentType)
                 .HasColumnName("employment_type");
 
+            builder.Property(x => x.IsPinned)
+                .HasColumnName("is_pinned")
+                .HasDefaultValue(false);
+
             builder.Property(x => x.IsClosed)
                 .HasColumnName("is_closed")
                 .HasDefaultValue(false);
